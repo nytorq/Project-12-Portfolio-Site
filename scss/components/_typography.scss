@@ -1,0 +1,74 @@
+// ==========================================================================
+// Typographical Styles
+// ==========================================================================
+
+// Base styles for HTML5 tags
+
+h1, h2, h3 {
+  letter-spacing: -0.08em;
+  font-weight: $font-weight--black;
+}
+
+h1 {
+  font-size: rem(80px);
+  line-height: rem(96px);
+}
+
+h2 {
+  font-size: rem(56px);
+  line-height: rem(72px);
+}
+
+h3 {
+  font-size: rem(40px);
+  line-height: rem(56px);
+}
+
+p {
+  font-weight: $font-weight--regular;
+  letter-spacing: -0.02em;
+}
+
+ul {
+  list-style: none;
+  text-align: center;
+  padding-left: 0;
+  @include mq($break-t) {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+// Footer style
+
+footer > * {
+  color: $white;
+}
+
+.footer {
+  @include e(title) {
+    margin: 0;
+    font-size: rem(58px);
+    text-align: center;
+  }
+  @include e(link) {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin: rem(32px) 0;
+    &:hover {
+      color: $color-tertiary;
+    }
+  }
+}
+
+
+// Stylizations
+
+.black {
+  font-weight: $font-weight--black;
+}
+
+.bold {
+  font-weight: $font-weight--bold;
+}

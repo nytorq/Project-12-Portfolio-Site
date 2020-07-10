@@ -1,0 +1,43 @@
+// ==========================================================================
+// Global Config
+// ==========================================================================
+
+// // Font Stack
+// $font-family--arialBlack                  : 'Arial Black';
+// $font-family--arial                       : Arial;
+//
+// // Font Weights
+// $font-weight--regular                  : $font-family--arial;
+// $font-weight--bold                     : 600;
+// $font-weight--black                    : $font-family--arialBlack;
+
+// Font Stack
+$font-family                  : Arial, 'Arial Black';
+
+// Font Weights
+$font-weight--regular                  : 500;
+$font-weight--bold                     : 600;
+$font-weight--black                    : 800;
+
+// Widths
+$max-width                             : 1024px;
+
+// Base Colors
+$white                                 : #fff;
+$rich-black                            : #0A090B;
+$cosmic-cobalt                         : #323786;
+$violet-blue                           : #646CC4;
+
+// Color Usage
+$color-primary                         : $rich-black;
+$color-secondary                       : $cosmic-cobalt;
+$color-tertiary                        : $violet-blue;
+
+// Text
+$base__font-size                       : 20px;
+$base__line                            : 24px;
+
+// Breakpoints
+$break-m                               : 425px;
+$break-t                               : 768px;
+$break-d                               : 1024px;

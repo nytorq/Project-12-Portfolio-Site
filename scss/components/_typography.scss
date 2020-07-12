@@ -57,8 +57,11 @@ p {
     font-size: rem(24px);
   }
   @include mq($break-d) {
-    font-size: rem(32px);
+    font-size: rem(30px);
     letter-spacing: -0.03em;
+  }
+  @include mq($break-hd) {
+    font-size: rem(32px);
   }
 }
 
@@ -136,5 +139,87 @@ a {
   display: none;
   @include mq($break-t) {
     display: table;
+  }
+}
+
+// Portfolio Image Type styles
+
+// .portfolio__title {
+//   @include m(exp) {
+//     @extend %portfolio_title;
+//     bottom: -32%;
+//     @include mq($break-t) {
+//       bottom: -36%;
+//     }
+//     @include mq($break-d) {
+//       bottom: -42%;
+//     }
+//   }
+//   @include m(pep) {
+//     @extend %portfolio_title;
+//     bottom: -58%;
+//     @include mq($break-t) {
+//       bottom: -36%;
+//     }
+//     @include mq($break-d) {
+//       bottom: -42%;
+//     }
+//   }
+//   @include m(hue) {
+//     @extend %portfolio_title;
+//     bottom: -84%;
+//     @include mq($break-t) {
+//       bottom: -62%;
+//     }
+//     @include mq($break-d) {
+//       bottom: -42%;
+//     }
+//   }
+//   @include m(tsp) {
+//     @extend %portfolio_title;
+//     bottom: -111%;
+//     @include mq($break-t) {
+//       bottom: -62%;
+//     }
+//     @include mq($break-d) {
+//       bottom: -68%;
+//     }
+//     @include mq($break-hd) {
+//       bottom: -42%;
+//     }
+//   }
+//   // @include mq($break-d) {
+//   //   visibility: hidden;
+//   // }
+// }
+
+.portfolio__title {
+  @include m(exp) {
+    @extend %portfolio_title;
+    bottom: 58%;
+    @include mq($break-d) {
+      bottom: 67%;
+    }
+  }
+  @include m(pep) {
+    @extend %portfolio_title;
+    bottom: 141%;
+    @include mq($break-d) {
+      bottom: 148%
+    }
+  }
+  @include m(hue) {
+    @extend %portfolio_title;
+    bottom: 113%;
+    @include mq($break-d) {
+      bottom: 119%;
+    }
+  }
+  @include m(tsp) {
+    @extend %portfolio_title;
+    bottom: 137%;
+    @include mq($break-d) {
+      bottom: 144%;
+    }
   }
 }

@@ -22,3 +22,14 @@
   position: relative;
   bottom: -7%;
 }
+
+
+%portfolio_title {
+  color: $white;
+  background-color: $color-primary;
+  padding: 8px;
+  margin: 16px;
+  position: relative;
+  display: inline;
+  z-index: 100;
+}

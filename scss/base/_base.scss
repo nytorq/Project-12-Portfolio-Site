@@ -7,7 +7,12 @@
   font-size: $base__font-size;
   line-height: $base__line;
   font-weight: $font-weight--regular;
+  line-height: 1.25;
   color: $color-primary;
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 8px $color-tertiary;
+  }
 }
 
 .container {

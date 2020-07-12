@@ -5,4 +5,14 @@
 footer {
   background-color: $color-primary;
   padding: rem(56px) rem(16px);
+  display: flex;
+  flex-direction: column;
+  @include mq($break-t) {
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: rem(56px) rem(80px);
+  }
+  @include mq($break-hd) {
+    padding: rem(56px) rem(160px);
+  }
 }

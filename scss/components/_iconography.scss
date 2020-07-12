@@ -1,0 +1,37 @@
+// ==========================================================================
+// Iconography Styles
+// ==========================================================================
+
+.footer {
+  @include e(link){
+    i {
+      color: $white;
+      padding: rem(4px) rem(16px);
+    }
+  }
+}
+
+
+.footer__link:hover > i {
+  animation: snap .5s ease-in backwards;
+}
+
+// @keyframes bounce {
+//     0%   { transform: scale(1,1)         translateX(0);     }
+//     10%  { transform: scale(1.75,.9)     translateX(0);     }
+//     30%  { transform: scale(.9,1.75)     translateX(-32px); }
+//     50%  { transform: scale(1.25,.95)    translateX(0);     }
+//     57%  { transform: scale(1,1)         translateX(-8px);  }
+//     64%  { transform: scale(1,1)         translateX(0);     }
+//     100% { transform: scale(1,1)         translateX(0);     }
+// }
+
+@keyframes snap {
+    0%   { transform: scale(1,1)      }
+    10%  { transform: scale(2,1.1)    }
+    30%  { transform: scale(.9,1.75)  }
+    50%  { transform: scale(1.25,.95) }
+    57%  { transform: scale(1,1)      }
+    64%  { transform: scale(1.1,1.1)  }
+    100% { transform: scale(1,1)      }
+}

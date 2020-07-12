@@ -5,7 +5,31 @@
 .card {
   height: 15vh;
   border: 8px solid $color-primary;
+  -webkit-clip-path: inset(0 0 0 0);
+  clip-path: inset(0 0 0 0);
   &:hover {
-    border-color: $color-tertiary;
+    border-color: $color-accent;
   }
+}
+
+.grid:nth-of-type(1) .card:nth-child(1) {
+  background: linear-gradient(139.79deg, $nsp-blue 0%, $nsp-green 100%);
+}
+
+.portfolio__image--nsp {
+  width: 50%;
+  position: relative;
+  top: 10%;
+}
+
+.grid:nth-of-type(1) .card:nth-child(2) {
+  background: linear-gradient(324.5deg, $pep-tan 0%, $pep-black 100%);
+}
+
+.grid:nth-of-type(1) .card:nth-child(3) {
+  background: linear-gradient(227.19deg, $hue-gray 0%, $hue-dark-gray 100%);
+}
+
+.grid:nth-of-type(1) .card:nth-child(4) {
+  background: linear-gradient(180deg, $tsp-dark-red 0%, $tsp-red 100%);
 }

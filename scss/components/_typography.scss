@@ -3,30 +3,63 @@
 // ==========================================================================
 
 // Base styles for HTML5 tags
+p, ul, ol, li {
+  max-width: 740px;
+  @include mq($break-d) {
+    max-width: 1052px;
+  }
+}
+
 
 h1, h2, h3 {
   letter-spacing: -0.08em;
   font-weight: $font-weight--black;
+  text-align: center;
+  @include mq($break-m) {
+    text-align: left;
+  }
 }
 
 h1 {
   font-size: rem(80px);
-  line-height: rem(96px);
+  @include mq($break-t) {
+    font-size: rem(192px);
+  }
+  @include mq($break-d) {
+    font-size: rem(256px);
+  }
 }
 
 h2 {
   font-size: rem(56px);
-  line-height: rem(72px);
+  @include mq($break-t) {
+    font-size: rem(64px);
+  }
+  @include mq($break-d) {
+    font-size: rem(80px);
+  }
 }
 
 h3 {
   font-size: rem(40px);
-  line-height: rem(56px);
+  @include mq($break-t) {
+    font-size: rem(44px);
+  }
+  @include mq($break-d) {
+    font-size: rem(48px);
+  }
 }
 
 p {
   font-weight: $font-weight--regular;
   letter-spacing: -0.02em;
+  @include mq($break-t) {
+    font-size: rem(24px);
+  }
+  @include mq($break-d) {
+    font-size: rem(32px);
+    letter-spacing: -0.03em;
+  }
 }
 
 ul {
@@ -39,36 +72,69 @@ ul {
   }
 }
 
-// Footer style
-
-footer > * {
-  color: $white;
-}
-
-.footer {
-  @include e(title) {
-    margin: 0;
-    font-size: rem(58px);
-    text-align: center;
-  }
-  @include e(link) {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    margin: rem(32px) 0;
-    &:hover {
-      color: $color-tertiary;
-    }
-  }
-}
-
-
-// Stylizations
-
+// General Type Styles
 .black {
   font-weight: $font-weight--black;
 }
 
 .bold {
   font-weight: $font-weight--bold;
+}
+
+// Hero styles
+.hero {
+  margin: 0;
+  text-align: left;
+  line-height: 1;
+  height: 75vh;
+}
+
+// Anchor stylesheet
+a {
+  text-align: center;
+  text-decoration: none;
+  &:hover {
+    color: $color-accent;
+    text-decoration: underline;
+  }
+}
+
+.footer {
+  @include e(title) {
+    @extend %footer;
+    font-size: rem(60px);
+    text-align: center;
+    margin: 0;
+    @include mq($break-t) {
+      text-align: right;
+      font-size: rem(130px);
+    }
+    @include mq($break-d) {
+      font-size: rem(178px);
+    }
+  }
+  @include e(linkContainer) {
+    @include mq($break-t) {
+      flex-grow: 2;
+    }
+  }
+  @include e(link) {
+    @extend %footer;
+    display: block;
+    margin: rem(32px) 0;
+    color: $white;
+    &:hover {
+      text-decoration: none;
+    }
+    @include mq($break-t) {
+      text-align: left;
+    }
+  }
+}
+
+.line-break {
+  display: none;
+  @include mq($break-t) {
+    display: table;
+  }
 }

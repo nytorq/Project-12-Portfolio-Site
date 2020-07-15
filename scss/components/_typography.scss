@@ -11,10 +11,11 @@ p, ul, ol, li {
 }
 
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   letter-spacing: -0.08em;
   font-weight: $font-weight--black;
   text-align: center;
+  word-break: break-all;
   @include mq($break-m) {
     text-align: left;
   }
@@ -50,7 +51,17 @@ h3 {
   }
 }
 
-p {
+h4 {
+  font-size: rem(24px);
+  @include mq($break-t) {
+    font-size: rem(30px);
+  }
+  @include mq($break-d) {
+    font-size: rem(34px);
+  }
+}
+
+p, ul, ol {
   font-weight: $font-weight--regular;
   letter-spacing: -0.02em;
   @include mq($break-t) {
@@ -98,7 +109,6 @@ a {
   text-decoration: none;
   &:hover {
     color: $color-accent;
-    text-decoration: underline;
   }
 }
 
@@ -143,56 +153,6 @@ a {
 }
 
 // Portfolio Image Type styles
-
-// .portfolio__title {
-//   @include m(exp) {
-//     @extend %portfolio_title;
-//     bottom: -32%;
-//     @include mq($break-t) {
-//       bottom: -36%;
-//     }
-//     @include mq($break-d) {
-//       bottom: -42%;
-//     }
-//   }
-//   @include m(pep) {
-//     @extend %portfolio_title;
-//     bottom: -58%;
-//     @include mq($break-t) {
-//       bottom: -36%;
-//     }
-//     @include mq($break-d) {
-//       bottom: -42%;
-//     }
-//   }
-//   @include m(hue) {
-//     @extend %portfolio_title;
-//     bottom: -84%;
-//     @include mq($break-t) {
-//       bottom: -62%;
-//     }
-//     @include mq($break-d) {
-//       bottom: -42%;
-//     }
-//   }
-//   @include m(tsp) {
-//     @extend %portfolio_title;
-//     bottom: -111%;
-//     @include mq($break-t) {
-//       bottom: -62%;
-//     }
-//     @include mq($break-d) {
-//       bottom: -68%;
-//     }
-//     @include mq($break-hd) {
-//       bottom: -42%;
-//     }
-//   }
-//   // @include mq($break-d) {
-//   //   visibility: hidden;
-//   // }
-// }
-
 .portfolio__title {
   @include m(exp) {
     @extend %portfolio_title;
@@ -222,4 +182,40 @@ a {
       bottom: 144%;
     }
   }
+  @include m(rfo) {
+    @extend %portfolio_title;
+    bottom: 33%;
+  }
+  @include m(ipg) {
+    @extend %portfolio_title;
+    bottom: 33%;
+  }
+  @include m(wsg) {
+    @extend %portfolio_title;
+    bottom: 33%;
+  }
+  @include m(gsa) {
+    @extend %portfolio_title;
+    bottom: 33%;
+  }
+  @include m(wad) {
+    @extend %portfolio_title;
+    bottom: 33%;
+  }
+}
+
+// Resume type styles
+.company {
+  margin-top: 0;
+  margin-bottom: rem(4px);
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 0
+}
+
+.period {
+  margin-top: 0;
+  margin-bottom: rem(16px)
 }

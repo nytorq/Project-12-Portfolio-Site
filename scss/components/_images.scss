@@ -2,6 +2,10 @@
 // Image Styles
 // ==========================================================================
 
+img {
+  width: 100%;
+}
+
 .card__frame {
   height: 200px;
 }
@@ -37,6 +41,24 @@
     @extend %porfolio_image;
     clip-path: inset(0 0 55.6% 0);
   }
+  @include m(srs) {
+    @extend %porfolio_image;
+    object-position: 20% 35%;
+  }
+}
+
+#art + .grid > span > a > img:first-child {
+  object-position: 20% 20%;
+}
+
+#art + .grid > span:last-child > a > img {
+  object-position: 20% 78%;
+}
+
+.portfolio__screenshot {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
 

@@ -1,0 +1,67 @@
+// ==========================================================================
+// Extends or Placeholders
+// ==========================================================================
+
+// General Placeholders
+
+%centered {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 100%;
+  max-width: $max-width;
+  flex-grow: inherit;
+}
+
+// UI Element Specific Placeholders
+
+%btn {
+  border: none;
+  border-radius: 0.3em;
+  color: $white;
+  text-transform: uppercase;
+  font-weight: $font-weight--bold;
+  width: 100%;
+  margin: 1em 0;
+  padding: 1.5em 0em;
+  @include mq($break-t) {
+    width: auto;
+    padding: 1.5em 2em;
+  }
+  @include mq($break-d) {
+    width: 15%;
+  }
+}
+
+%input {
+  border-bottom: 8px $color-secondary solid;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 100%;
+  max-width: -webkit-fill-available;
+  padding: 1em 0.5em;
+  margin: 1em 0;
+  &:hover {
+    border-bottom: 8px lighten($color-secondary, 10%) solid;
+  }
+}
+
+%nav-item {
+  padding: 1em 0;
+  border-radius: 0.5em;
+  text-decoration: none;
+  @include mq($break-t) {
+    padding: 1em;
+  }
+}
+
+%link {
+  font-weight: $font-weight--ultra-bold;
+  color: $color-secondary;
+  text-decoration: none;
+}
+
+%images {
+  width: 12em;
+  display: block;
+}

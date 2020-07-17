@@ -61,7 +61,7 @@ h4 {
   }
 }
 
-p, ul, ol {
+p, ul, ol, a {
   font-weight: $font-weight--regular;
   letter-spacing: -0.02em;
   @include mq($break-t) {
@@ -95,12 +95,22 @@ ul {
   font-weight: $font-weight--bold;
 }
 
+
+// The following creates a line break at a specific point within a word. The "Yell at Me" HTML in the footer
+.line-break {
+  display: none;
+  @include mq($break-t) {
+    display: table;
+  }
+}
+
 // Hero styles
 .hero {
   margin: 0;
   text-align: left;
   line-height: 1;
   height: 75vh;
+  word-break: normal;
 }
 
 // Anchor stylesheet
@@ -133,6 +143,7 @@ a {
   }
   @include e(link) {
     @extend %footer;
+    font-size: rem(20px);
     display: block;
     margin: rem(32px) 0;
     color: $white;
@@ -145,12 +156,17 @@ a {
   }
 }
 
-.line-break {
-  display: none;
-  @include mq($break-t) {
-    display: table;
+.skip {
+  @include m(prev) {
+    @extend %skipLink;
+    text-align: left;
+  }
+  @include m(next) {
+    @extend %skipLink;
+    text-align: right;
   }
 }
+
 
 // Portfolio Image Type styles
 .portfolio__title {
@@ -218,4 +234,31 @@ a {
 .period {
   margin-top: 0;
   margin-bottom: rem(16px)
+}
+
+
+// Hue Pro card and logotype stylesheet
+.huepro-card {
+  position: relative;
+  width: 100%;
+  min-height: 228px;
+  max-height: 328px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#454545), to(#2A2A2A));
+  background: linear-gradient(180deg, #454545 0%, #2A2A2A 100%);
+  margin-bottom: 1em;
+}
+
+.huepro-title {
+    position: absolute;
+    top: 8.5%;
+    width: 100%;
+    font-size: 4em;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-weight: 900;
+    text-align: center;
+    background-color: #6a0844;
+    color: transparent;
+    text-shadow: 0px 2px 1px rgba(255, 146, 213, 0.76);
+    -webkit-background-clip: text;
+    background-clip: text;
 }

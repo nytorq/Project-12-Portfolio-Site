@@ -36,3 +36,12 @@
     font-size: 24px;
   }
 }
+
+// Link stylization for skip previous and next buttons at bottom of project pages
+
+%skipLink {
+  font-weight: 900;
+  letter-spacing: -0.08em;
+  display: block;
+  margin: 2rem 0;
+}

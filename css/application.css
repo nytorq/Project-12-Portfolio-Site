@@ -485,6 +485,14 @@ a:hover .lni-arrow-left {
 a:hover .lni-arrow-right {
   animation: bounce-right .5s ease-in backwards; }
 
+.footer__link > svg {
+  padding: 0 0.7rem;
+  position: relative;
+  top: 6px; }
+
+.footer__link:hover > svg {
+  animation: snap .5s ease-in backwards; }
+
 @keyframes bounce-left {
   0% {
     transform: scale(1, 1) translateX(0); }

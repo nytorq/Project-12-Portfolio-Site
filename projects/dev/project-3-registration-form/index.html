@@ -8,7 +8,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.lineicons.com/2.0/LineIcons.css">
 	<!-- <link rel="stylesheet" href="css/normalize.css"> -->
-	<link rel="stylesheet" href="responsive_forms.css">
+	<link rel="stylesheet" href="styles.css">
 	<!-- <link rel="stylesheet" href="../../../css/application.css"> -->
 </head>
 <body>
@@ -16,7 +16,7 @@
 		<div class="modal">
 			<div class="modalHeader"><h1>Treehouse Project #3 - A Newsletter Registration Form</h1><i class="lni lni-close" id="closeIcon"></i></div><!-- /.header -->
 			<h2>Description</h2>
-			<p>This is project 3 in the Front-End Web Development TechDegree curriculum
+			<p>This is project 3 of 12 in the Front-End Web Development TechDegree curriculum
 				where I was asked to create a form to subscribe to a coding newsletter.</p>
 			<h2>Skills</h2>
 			<ul>
@@ -171,7 +171,10 @@
 		<script>
 			let closeIcon = document.getElementById("closeIcon");
 			function closeModal() {
-				console.log('icon clicked!');
+				let modal = closeIcon.parentNode.parentNode;
+				let overlay = modal.parentNode
+				modal.style.visibility = "hidden";
+				overlay.style.visibility = "hidden";
 			}
 			closeIcon.addEventListener('click', closeModal);
 		</script>

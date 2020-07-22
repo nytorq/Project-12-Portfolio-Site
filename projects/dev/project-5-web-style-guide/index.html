@@ -6,6 +6,7 @@
   <title>Circles UI Kit</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/application.css">
+  <link rel="stylesheet" href="https://cdn.lineicons.com/2.0/LineIcons.css">
 </head>
 <!--
     List of classes used
@@ -58,6 +59,28 @@
   -->
 
 <body class="container">
+  <div class="overlay">
+		<div class="modal">
+			<div class="modalHeader"><h1>Treehouse Project #5 - A Web Style Guide</h1><i class="lni lni-close" id="closeIcon"></i></div><!-- /.header -->
+			<h2>Description</h2>
+			<p>This is project 5 of 12 in the Front-End Web Development TechDegree curriculum. This is where I learned how to write SCSS, create a manifest of partials, and keep styles modularized. We did this by create a style guide of commonplace web components.</p>
+			<h2>Skills</h2>
+			<ul>
+				<li>Mobile-first web development</li>
+				<li>Create & comparmentalizing styles into separate files</li>
+				<li>The fundamentals of SCSS (variables, mixins, extends, functions, etc.)</li>
+				<li>BEM class naming conventions and how to use SCSS to create them</li>
+        <li>Writing nested SCSS for media queries and pseudo-classes for better readability</li>
+				<li>Branching & commits via Git and Github</li>
+			</ul>
+			<h2>Built With</h2>
+			<ul>
+				<li>HTML</li>
+        <li>SCSS</li>
+				<li>CSS</li>
+			</ul>
+		</div><!-- /.modal -->
+	</div><!-- /.overlay -->
   <div class="grid__row">
     <div class="grid__col--3">
       <a class="link" href="/">
@@ -168,7 +191,16 @@
   <div class="grid__row">
     <div class="grid__col--7 theme__colors centered">.centered .grid__col--7</div>
   </div>
-
+  <script>
+    let closeIcon = document.getElementById("closeIcon");
+    function closeModal() {
+      let modal = closeIcon.parentNode.parentNode;
+      let overlay = modal.parentNode
+      modal.style.visibility = "hidden";
+      overlay.style.visibility = "hidden";
+    }
+    closeIcon.addEventListener('click', closeModal);
+  </script>
 </body>
 
 </html>

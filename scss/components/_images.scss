@@ -2,10 +2,37 @@
 // Image Styles
 // ==========================================================================
 
+// Basic Styles
 img {
   width: 100%;
 }
 
+// Banner/Hero image
+.banner {
+  // background-image: url(../images/guy-looking-at-top-left-3x.png),
+  //                   linear-gradient(to right, red, blue),
+  //                   linear-gradient(to right, blue, red);
+  background-image: linear-gradient(to right, rgba($color-comp-accent, 0.5), rgba($color-comp-accent, 0.5)),
+                    linear-gradient(to right, rgba($color-accent, 0.64), rgba($color-accent, 0.64)),
+                    url(../images/guy-looking-at-top-left-3x.png);
+  background-blend-mode: lighten,
+                         darken,
+                         normal;
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  // background-color: #A90505;
+  // background-blend-mode: lighten;
+  // background-color: rgba($color-accent, 0.64);
+  // background-blend-mode: darken;
+
+}
+
+.banner-2 {
+
+}
+
+// Card Styles
 .card__frame {
   height: 200px;
 }

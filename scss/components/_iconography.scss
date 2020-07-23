@@ -10,6 +10,9 @@ i {
   @include e(link){
     i {
       color: $white;
+      @include mq($break-hd) {
+        padding: 0 0.25rem;
+      }
     }
   }
 }
@@ -32,6 +35,11 @@ a:hover .lni-arrow-right {
   padding: 0 0.7rem;
   position: relative;
   top: 6px;
+  @include mq($break-hd) {
+    padding: 0 0.25rem;
+    height: 19px;
+    top: 4px;
+  }
 }
 
 .footer__link:hover > svg {

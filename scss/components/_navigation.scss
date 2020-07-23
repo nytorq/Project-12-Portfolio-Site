@@ -8,11 +8,10 @@ footer {
   display: flex;
   flex-direction: column;
   @include mq($break-t) {
-    flex-direction: row-reverse;
-    align-items: center;
-    padding: rem(56px) rem(80px);
+    flex-direction: row;
+    padding: rem(56px) rem(24px);
   }
   @include mq($break-hd) {
-    padding: rem(56px) rem(160px);
+    padding: 10% 4%;
   }
 }

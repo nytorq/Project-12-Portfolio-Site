@@ -102,6 +102,9 @@ ul {
   @include mq($break-t) {
     display: table;
   }
+  @include mq($break-hd) {
+    display: none;
+  }
 }
 
 // Hero styles
@@ -111,6 +114,7 @@ ul {
   line-height: 1;
   height: 75vh;
   word-break: normal;
+  color: $white
 }
 
 // Anchor stylesheet
@@ -124,13 +128,15 @@ a {
 
 .footer {
   @include e(title) {
-    @extend %footer;
+    color: $white;
     font-size: rem(60px);
     text-align: center;
-    margin: 0;
+    margin: 4rem 0 0 0;
     @include mq($break-t) {
       text-align: right;
       font-size: rem(130px);
+      line-height: 1;
+      margin: 0;
     }
     @include mq($break-d) {
       font-size: rem(178px);
@@ -138,11 +144,48 @@ a {
   }
   @include e(linkContainer) {
     @include mq($break-t) {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    & a {
+      font-weight: 900;
+      font-size: rem(32px);
+      text-align: center;
+      @include mq($break-t) {
+        text-align: left;
+        padding: 0.5rem 0;
+        margin: 0;
+      }
+    }
+  }
+  @include e(linkContainer) {
+    @include mq($break-t) {
       flex-grow: 2;
     }
   }
+  @include e(contactContainer) {
+    @include mq($break-t) {
+      flex-grow: 2;
+    }
+    @include mq($break-hd) {
+      display: flex;
+      justify-content: flex-end;
+    }
+    & a {
+      margin: 0;
+      padding: 0.5rem 0;
+      @include mq($break-hd) {
+        margin: 0 1rem;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
   @include e(link) {
-    @extend %footer;
+    color: $white;
     font-size: rem(20px);
     display: block;
     margin: rem(32px) 0;
@@ -151,7 +194,7 @@ a {
       text-decoration: none;
     }
     @include mq($break-t) {
-      text-align: left;
+      text-align: right;
     }
   }
 }
@@ -224,6 +267,7 @@ a {
 .company {
   margin-top: 0;
   margin-bottom: rem(4px);
+  text-align: left;
 }
 
 .title {

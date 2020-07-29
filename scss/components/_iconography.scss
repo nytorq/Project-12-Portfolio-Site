@@ -17,9 +17,13 @@ i {
   }
 }
 
-
 .footer__link:hover > i {
   animation: snap .5s ease-in backwards;
+}
+
+.resumeLink:hover > i {
+  animation: snap .5s ease-in backwards;
+  color: $color-accent;
 }
 
 a:hover .lni-arrow-left {

@@ -11,7 +11,9 @@
   color: $color-primary;
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 8px $color-secondary;
+    // box-shadow: 0 0 0 8px $color-secondary;
+    background-color: $color-comp-accent;
+    border-radius: rem(4px);
   }
 }
 
@@ -19,6 +21,14 @@
   max-width: $max-width;
   margin: 0 auto;
   padding: em(16px);
+}
+
+.container:first-child {
+  position: relative;
+  top: 20%;
+  // @include mq($break-t) {
+  //   position: inherit;
+  // }
 }
 
 .centered {

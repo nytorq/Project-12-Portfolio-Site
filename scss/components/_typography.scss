@@ -15,7 +15,8 @@ h1, h2, h3, h4 {
   letter-spacing: -0.08em;
   font-weight: $font-weight--black;
   text-align: center;
-  word-break: break-all;
+  // word-break: break-all;
+  word-break: break-word;
   @include mq($break-m) {
     text-align: left;
   }
@@ -80,10 +81,10 @@ ul {
   list-style: none;
   text-align: center;
   padding-left: 0;
-  @include mq($break-t) {
-    display: flex;
-    justify-content: flex-end;
-  }
+  // @include mq($break-t) {
+  //   display: flex;
+  //   justify-content: flex-end;
+  // }
 }
 
 // General Type Styles
@@ -97,7 +98,11 @@ ul {
 
 
 // The following creates a line break at a specific point within a word. The "Yell at Me" HTML in the footer
-.line-break {
+.lineBreak {
+  display: table;
+}
+
+#footer__lineBreak {
   display: none;
   @include mq($break-t) {
     display: table;
@@ -112,7 +117,6 @@ ul {
   margin: 0;
   text-align: left;
   line-height: 1;
-  height: 75vh;
   word-break: normal;
   color: $white
 }
@@ -264,6 +268,17 @@ a {
 }
 
 // Resume type styles
+
+.resumeLink i {
+  font-weight: 900;
+  position: relative;
+  bottom: 13px;
+}
+
+.resumeLink h2 {
+  display: inline-block;
+}
+
 .company {
   margin-top: 0;
   margin-bottom: rem(4px);
@@ -305,4 +320,14 @@ a {
     text-shadow: 0px 2px 1px rgba(255, 146, 213, 0.76);
     -webkit-background-clip: text;
     background-clip: text;
+}
+
+// Yell at Me JS interactions
+
+.yellAtMe {
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  transition: 0.15s;
 }

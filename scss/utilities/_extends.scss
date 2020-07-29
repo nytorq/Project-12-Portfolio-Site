@@ -28,7 +28,7 @@
   margin: 16px;
   position: relative;
   display: inline;
-  z-index: 100;
+  z-index: 1;
   @include mq($break-t) {
     font-size: 24px;
   }

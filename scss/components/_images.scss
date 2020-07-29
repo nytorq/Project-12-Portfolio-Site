@@ -5,13 +5,13 @@
 // Basic Styles
 img {
   width: 100%;
+  max-width: calc(1024px - 32px);
+  margin: 0 auto;
+  display: block;
 }
 
 // Banner/Hero image
 .banner {
-  // background-image: url(../images/guy-looking-at-top-left-3x.png),
-  //                   linear-gradient(to right, red, blue),
-  //                   linear-gradient(to right, blue, red);
   background-image: linear-gradient(to right, rgba($color-comp-accent, 0.5), rgba($color-comp-accent, 0.5)),
                     linear-gradient(to right, rgba($color-accent, 0.64), rgba($color-accent, 0.64)),
                     url(../images/guy-looking-at-top-left-3x.png);
@@ -21,29 +21,34 @@ img {
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
-  // background-color: #A90505;
-  // background-blend-mode: lighten;
-  // background-color: rgba($color-accent, 0.64);
-  // background-blend-mode: darken;
-
-}
-
-.banner-2 {
-
+  height: 75vh;
+  min-height: rem(500px);
+  @include mq($break-d) {
+    height: 115vh;
+  }
 }
 
 // Card Styles
 .card__frame {
   height: 200px;
+  &:focus {
+    border: 8px solid $color-comp-accent;
+    border-radius: rem(4px);
+  }
 }
 
 .card {
   height: 200px;
   width: 100%;
-  box-shadow: 0px 0 0 8px $color-primary;
+  border: 8px solid $color-primary;
+  // box-shadow: 0px 0 0 8px $color-primary;
   display: inline-block;
   &:hover {
-    box-shadow: 0px 0 0 8px $color-accent;
+    // box-shadow: 0px 0 0 8px $color-accent;
+    border-color: $color-accent;
+  }
+  &:focus {
+    box-shadow: 0px 0 0 8px $color-comp-accent;
   }
 }
 

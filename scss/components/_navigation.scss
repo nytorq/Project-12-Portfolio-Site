@@ -2,6 +2,59 @@
 // Navigation Styles
 // ==========================================================================
 
+// Top Navigation
+nav {
+  display: flex;
+  flex-direction: column;
+  height: 0;
+  background-color: rgba($white, 0.95);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  overflow-y: hidden;
+  transition: ease-in-out 0.33s;
+  @include mq($break-t) {
+    height: rem(124px);
+    flex-direction: row;
+    align-items: center;
+    padding: 0 rem(16px);
+  }
+}
+
+.navLink {
+  font-weight: 900;
+  padding: 100px 1rem 1rem 1rem;
+  font-size: rem(40px);
+  letter-spacing: -3px;
+  @include mq($break-t) {
+    visibility: visible;
+    padding: 0 1rem;
+  }
+}
+
+#hamburger_menu, #close_icon {
+  padding: 1rem;
+  font-size: rem(40px);
+  font-weight: 900;
+  position: fixed;
+  @include mq($break-t) {
+    visibility: hidden;
+  }
+}
+
+#hamburger_menu {
+  z-index: 2;
+  background-color: rgba($white, 0.95);
+  box-shadow: 0 0 20px 0px rgba($color-primary, 0.50);
+  // @include mq($break-t) {
+  //   visibility: hidden;
+  //   position: inherit;
+  //   z-index: inherit;
+  //   background-color: inherit;
+  //   box-shadow: none;
+  // }
+}
+
 footer {
   background-color: $color-primary;
   padding: rem(56px) rem(16px);

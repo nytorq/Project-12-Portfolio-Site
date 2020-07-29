@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="https://cdn.lineicons.com/2.0/LineIcons.css">
   </head>
   <body>
+    <nav id="topNav">
+      <i id="hamburger_menu" class="lni lni-menu"></i>
+      <i id="close_icon" class="lni lni-close"></i>
+      <a class="navLink" href="../../../index.html">Home</a>
+      <a class="navLink" href="../../../index.html#stuff">Stuff</a>
+      <a class="navLink" href="../../../index.html#resume">Resume</a>
+      <a class="navLink" href="#contact">Contact</a>
+    </nav>
     <div class="container">
         <h1 class="project-title">TSP VMI</h1>
         <p class="project-services">UI Design</p>
@@ -36,7 +44,7 @@
           <img class="img__fullwidth--center-top"
                title=""
                alt=""
-               /tsp-vmi-ui-elements-1x.png"
+               src="/tsp-vmi-ui-elements-1x.png"
           />
         <h3 class="section-titles">Conclusion</h3>
         <p>We delivered high-fidelity designs of the VMI functionality, and the entire web application was delivered mid-2015. It serves thousands of part records to some of the largest oil&amp;gas companies in the United States.</p>
@@ -44,13 +52,41 @@
         <a href="../expensable/expensable.html" class="skip--next">Next Project: ExpensAble<i class="lni lni-arrow-right"></i></a>
       </div><!--/.container-->
       <footer>
-        <h1 class="footer__title">Yell <span class="line-break"></span>at me</h1>
-        <div class="footer__contactContainer">
-          <a class="footer__link" href=""><i class="lni lni-envelope"></i>q@charlieprator.com</a>
-          <a class="footer__link" href=""><i class="lni lni-mobile"></i>713-893-3533</a>
-          <a class="footer__link" href=""><i class="lni lni-instagram"></i>@charlieprator</a>
-          <a class="footer__link" href=""><i class="lni lni-github"></i>nytorq</a>
-        </div><!-- /.footer__contactContainer -->
+        <div class="footer__linkContainer">
+          <a class="footer__link" href="../../../index.html"><i class="lni lni-home"></i>Home</a>
+          <a class="footer__link" href="../../../index.html#stuff"><i class="lni lni-paint-roller"></i></i>Stuff</a>
+          <a class="footer__link" href="../../../index.html#resume"><i class="lni lni-empty-file"></i></i>Resume</a>
+          <a class="footer__link" href="#contact"><i class="lni lni-phone"></i>Contact</a>
+        </div>
+        <div class="footer__titleAndContact">
+          <h1 class="footer__title">Yell <span id="footer__lineBreak"></span>at me</h1>
+          <div id="contact" class="footer__contactContainer">
+            <a class="footer__link" href="mailto:hey@charlieprator.com"><!--<i class="lni lni-envelope"></i>--><svg width="24" height="24"><use xlink:href="#envelope" fill="#ffffff"/></svg>hey@charlieprator.com</a>
+            <a class="footer__link" href="tel:1-713-893-3533"><i class="lni lni-mobile"></i>713-893-3533</a>
+            <a class="footer__link" href="https://www.instagram.com/charlieprator/"><i class="lni lni-instagram"></i>charlieprator</a>
+            <a class="footer__link" href="https://github.com/nytorq"><i class="lni lni-github"></i>nytorq</a>
+            <a class="footer__link" href="https://www.linkedin.com/in/cprator/"><i class="lni lni-linkedin"></i>cprator</a>
+          </div><!-- /.footer__contactContainer -->
+        </div><!-- /.footer__titleAndContact -->
       </footer>
+      <script>
+        let hamMenu = document.getElementById("hamburger_menu");
+        let closeIcon = document.getElementById("close_icon");
+        let nav = document.getElementById("topNav");
+        let navLinks = document.getElementsByClassName("navLink");
+        function openMenu() {
+          nav.style.height = "100vh";
+          hamMenu.style.visibility = "hidden";
+        }
+        function closeMenu() {
+          nav.style.height = "0";
+          hamMenu.style.visibility = "visible";
+        }
+        hamMenu.addEventListener('click', openMenu);
+        closeIcon.addEventListener('click', closeMenu);
+        // for (let i = 0 ; i < navLinks.length ; i++) {
+        //   navLinks[i].addEventListener('click', closeMenu);
+        // }
+      </script>
   </body>
 </html>

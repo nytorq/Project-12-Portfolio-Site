@@ -5,20 +5,23 @@
 // Basic Styles
 img {
   width: 100%;
-  max-width: calc(1024px - 32px);
+  height: auto;
+  max-width: rem(768px);
   margin: 0 auto;
   display: block;
+  object-fit: contain;
+  max-height: 66vh;
 }
 
 // Banner/Hero image
 .banner {
-  background-image: linear-gradient(to right, rgba($color-comp-accent, 0.5), rgba($color-comp-accent, 0.5)),
-                    linear-gradient(to right, rgba($color-accent, 0.64), rgba($color-accent, 0.64)),
-                    url(../images/guy-looking-at-top-left-3x.png);
+  background-image: linear-gradient(to right, rgba($color-comp-accent, 0.76), rgba($color-comp-accent, 0.76)),
+                    linear-gradient(to right, rgba($color-accent, 0.78), rgba($color-accent, 0.78)),
+                    url(../images/Photo_of_Charlie_desaturated.jpg);
   background-blend-mode: lighten,
                          darken,
                          normal;
-  background-position: bottom;
+  background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
   height: 75vh;

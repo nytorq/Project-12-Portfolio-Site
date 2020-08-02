@@ -25,10 +25,10 @@
 
 .container:first-child {
   position: relative;
-  top: 20%;
-  // @include mq($break-t) {
-  //   position: inherit;
-  // }
+  top: 43%;
+  @include mq($break-d) {
+    top: 52%;
+  }
 }
 
 .centered {

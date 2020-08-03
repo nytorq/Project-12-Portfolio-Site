@@ -6990,7 +6990,7 @@ svg {
 
 @media (min-width: 768px) {
 	.modal {
-		margin: 2em;
+		margin: 2em auto;
 	  max-width: 720px;
 	}
 }

@@ -207,7 +207,7 @@ button:focus {
 ==================================== */
 
 /*
-88    Overlay & Modal
+**    Overlay & Modal
 */
 
 .overlay {
@@ -224,23 +224,29 @@ button:focus {
 
 .modal {
   background-color: white;
-  padding: 2em 2em 4em 2em;
-	margin: 3em auto;
+	padding: 2em 1.5em;
+	margin: 5%;
+	max-height: 95vh;
   max-width: 720px;
 	box-shadow: 1px 24px 40px 4px rgba(0, 0, 0, 0.66);
+	transform: rotate(0deg);
 }
 
-.modalHeader {
-	display: flex;
-	flex-direction: row;
-  justify-content: space-between;
+@media (min-width: 768px) {
+	.modal {
+		margin: 2em;
+    width: 68vw;
+	}
 }
 
 /*
 **    Typography
 */
 
-.modalHeader > h1 {
+.modal > h1 {
+	margin: 0;
+	line-height: 1.15;
+	font-size: 16px;
 	font-family: Arial;
 	font-weight: 900;
 	letter-spacing: -0.08em;
@@ -249,40 +255,65 @@ button:focus {
 }
 
 .modal > h2 {
-	font-size: 24px;
+	font-size: 16px;
 	font-family: Arial;
 	font-weight: 900;
 	letter-spacing: -0.05em;
 	text-align: left;
 	color: #0A090B;
-  text-transform: none;
+	margin: 8px 0;
+  text-transform: inherit;
 }
 
 .modal > p,
 .modal > ul > li {
-	font-size: 18px;
+	font-size: 14px;
 	font-family: Arial;
 	letter-spacing: -0.02em;
 	color: #0A090B;
-	line-height: 1.5;
-}
-
-.modal > ul {
-  padding: 0 24px;
+	line-height: 1.15;
+	margin-top: 0;
+  display: block;
 }
 
 .modal > ul > li {
   display: list-item;
 }
 
-#closeIcon {
-	height: 24px;
-	width: 24px;
+.modal > ul {
+	margin: 4px 0;
+	list-style: disc;
+	margin-left: 20px;
+  text-align: left;
+  display: block;
 }
+
+#closeIcon {
+	position: fixed;
+	right: 8px;
+  top: 8px;
+  font-weight: 900;
+}
+
 
 #closeIcon:hover {
 	-webkit-animation: jello-diagonal-1 0.5s both;
 	        animation: jello-diagonal-1 0.5s both;
+}
+
+@media (min-width: 768px) {
+	.modal > h1 {
+		font-size: 24px;
+	}
+
+	.modal > h2 {
+		font-size: 20px;
+	}
+
+	.modal > p,
+	.modal > ul > li {
+		font-size: 18px;
+	}
 }
 
 /* ----------------------------------------------

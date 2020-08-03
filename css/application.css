@@ -468,6 +468,7 @@ nav {
   height: 0;
   background-color: rgba(255, 255, 255, 0.95);
   position: fixed;
+  top: 0;
   width: 100%;
   z-index: 3;
   overflow-y: hidden;
@@ -610,7 +611,7 @@ h1, h2, h3, h4 {
   letter-spacing: -0.08em;
   font-weight: 800;
   text-align: center;
-  word-break: break-word; }
+  word-break: break-all; }
   @media (min-width: 425px) {
     h1, h2, h3, h4 {
       text-align: left; } }
@@ -688,7 +689,7 @@ ul {
     #footer__lineBreak {
       display: none; } }
 
-.hero {
+.heroTitle {
   margin: 0;
   text-align: left;
   line-height: 1;
@@ -837,8 +838,7 @@ a {
   background-color: #6a0844;
   color: transparent;
   text-shadow: 0px 2px 1px rgba(255, 146, 213, 0.76);
-  -webkit-background-clip: text;
-  background-clip: text; }
+  -webkit-background-clip: text; }
 
 .yellAtMe {
   font-size: inherit;
@@ -871,7 +871,7 @@ img {
   object-fit: contain;
   max-height: 66vh; }
 
-.banner {
+.hero {
   background-image: linear-gradient(to right, rgba(169, 5, 5, 0.76), rgba(169, 5, 5, 0.76)), linear-gradient(to right, rgba(0, 255, 173, 0.78), rgba(0, 255, 173, 0.78)), url(../images/Photo_of_Charlie_desaturated.jpg);
   background-blend-mode: lighten, darken, normal;
   background-position: top;
@@ -880,7 +880,7 @@ img {
   height: 75vh;
   min-height: 25rem; }
   @media (min-width: 1024px) {
-    .banner {
+    .hero {
       height: 115vh; } }
 
 .card__frame {

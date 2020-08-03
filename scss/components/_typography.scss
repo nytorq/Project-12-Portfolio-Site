@@ -15,8 +15,7 @@ h1, h2, h3, h4 {
   letter-spacing: -0.08em;
   font-weight: $font-weight--black;
   text-align: center;
-  // word-break: break-all;
-  word-break: break-word;
+  word-break: break-all;
   @include mq($break-m) {
     text-align: left;
   }
@@ -113,7 +112,7 @@ ul {
 }
 
 // Hero styles
-.hero {
+.heroTitle {
   margin: 0;
   text-align: left;
   line-height: 1;
@@ -319,7 +318,6 @@ a {
     color: transparent;
     text-shadow: 0px 2px 1px rgba(255, 146, 213, 0.76);
     -webkit-background-clip: text;
-    background-clip: text;
 }
 
 // Yell at Me JS interactions

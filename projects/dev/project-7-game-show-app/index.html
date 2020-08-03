@@ -10,7 +10,8 @@
   <body>
     <div class="overlay">
   		<div class="modal">
-  			<div class="modalHeader"><h1>Treehouse Project #7 - JS Wheel of Fortune</h1><i class="lni lni-close" id="closeIcon"></i></div><!-- /.header -->
+  			<i class="lni lni-close" id="closeIcon"></i>
+        <h1>Treehouse Project #7 - JS Wheel of Fortune</h1>
   			<h2>Description</h2>
   			<p>In project 7 of 12 of the Treehouse Front-End Web Development we take a deeper dive into understanding Javascript more by recreating Wheel of Fortune in the browser.</p>
   			<h2>Skills</h2>
@@ -56,19 +57,19 @@
 
       <div id="scoreboard" class="section">
         <ol>
-          <li class="tries"><img src="images/liveHeart.png" height="35px" width="30px"></li>
-          <li class="tries"><img src="images/liveHeart.png" height="35px" width="30px"></li>
-          <li class="tries"><img src="images/liveHeart.png" height="35px" width="30px"></li>
-          <li class="tries"><img src="images/liveHeart.png" height="35px" width="30px"></li>
-          <li class="tries"><img src="images/liveHeart.png" height="35px" width="30px"></li>
+          <li class="tries"><img src="images/liveHeart.png" height="35" width="30" alt="Heart representing amount of lives"></li>
+          <li class="tries"><img src="images/liveHeart.png" height="35" width="30" alt="Heart representing amount of lives"></li>
+          <li class="tries"><img src="images/liveHeart.png" height="35" width="30" alt="Heart representing amount of lives"></li>
+          <li class="tries"><img src="images/liveHeart.png" height="35" width="30" alt="Heart representing amount of lives"></li>
+          <li class="tries"><img src="images/liveHeart.png" height="35" width="30" alt="Heart representing amount of lives"></li>
         </ol>
       </div>
     </div>
-    <script type="text/javascript" src="js/app.js"></script>
+    <script src="js/app.js"></script>
     <script>
 			let closeIcon = document.getElementById("closeIcon");
 			function closeModal() {
-				let modal = closeIcon.parentNode.parentNode;
+				let modal = closeIcon.parentNode;
 				let overlay = modal.parentNode
 				modal.style.visibility = "hidden";
 				overlay.style.visibility = "hidden";

@@ -459,7 +459,7 @@ template {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   grid-gap: 1.6rem; }
 
 nav {
@@ -797,6 +797,19 @@ a {
 .portfolio__title--wad {
   bottom: 33%; }
 
+.portfolioTitle {
+  font-family: Arial;
+  font-weight: 900;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  padding: 8px 16px;
+  display: inline;
+  position: fixed;
+  bottom: 0px;
+  left: 15px; }
+
 .resumeLink i {
   font-weight: 900;
   position: relative;
@@ -889,11 +902,39 @@ img {
     border: 8px solid #A90505;
     border-radius: 0.2rem; }
 
+.newcard {
+  width: 100%;
+  min-width: 200px;
+  height: 250px;
+  box-shadow: 0 0 6px 3px #00000012;
+  box-sizing: border-box;
+  border: 8px solid black;
+  background: linear-gradient(139.79deg, #015F85 0%, #7ABD45 100%);
+  transform: rotateX(0deg); }
+  .newcard:hover {
+    border: 8px solid #00ffad; }
+  .newcard:hover .portfolioTitle {
+    background-color: #00ffad;
+    color: #0A090B; }
+
+.newcard img {
+  max-width: 75vw;
+  height: 80%;
+  object-position: bottom center;
+  object-fit: contain;
+  width: 75%;
+  margin: 0 auto;
+  display: block;
+  position: fixed;
+  left: 13%;
+  bottom: 0; }
+
 .card {
   height: 200px;
   width: 100%;
   border: 8px solid #0A090B;
-  display: inline-block; }
+  display: inline-block;
+  box-sizing: border-box; }
   .card:hover {
     border-color: #00ffad; }
   .card:focus {

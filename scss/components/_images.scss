@@ -40,12 +40,45 @@ img {
   }
 }
 
+.newcard {
+  width: 100%;
+  min-width: 200px;
+  height: 250px;
+  box-shadow: 0 0 6px 3px #00000012;
+  box-sizing: border-box;
+  border: 8px solid black;
+  background: linear-gradient(139.79deg, #015F85 0%, #7ABD45 100%);
+  transform: rotateX(0deg);
+  &:hover {
+    border: 8px solid $color-accent;
+  }
+  &:hover .portfolioTitle {
+    background-color: $color-accent;
+    color: $color-primary;
+  }
+}
+
+.newcard img {
+  max-width: 75vw;
+  height: 80%;
+  object-position: bottom center;
+  object-fit: contain;
+  width: 75%;
+  margin: 0 auto;
+  display: block;
+  position: fixed;
+  left: 13%;
+  bottom: 0;
+}
+
 .card {
   height: 200px;
   width: 100%;
   border: 8px solid $color-primary;
   // box-shadow: 0px 0 0 8px $color-primary;
+  // max-width: calc(100vw - 48px);
   display: inline-block;
+  box-sizing: border-box;
   &:hover {
     // box-shadow: 0px 0 0 8px $color-accent;
     border-color: $color-accent;

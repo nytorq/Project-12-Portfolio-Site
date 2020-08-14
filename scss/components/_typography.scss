@@ -266,6 +266,20 @@ a {
   }
 }
 
+.portfolioTitle {
+  font-family: Arial;
+  font-weight: 900;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  padding: 8px 16px;
+  display: inline;
+  position: fixed;
+  bottom: 0px;
+  left: 15px;
+}
+
 // Resume type styles
 
 .resumeLink i {

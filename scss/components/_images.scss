@@ -59,9 +59,9 @@ img {
   }
 }
 
-.newcard img {
-  max-width: 75vw;
-  height: 80%;
+// Design portfolio imeages
+.grid:nth-of-type(1) .newcard img {
+  height: 90%;
   object-position: bottom center;
   object-fit: contain;
   width: 75%;
@@ -70,6 +70,18 @@ img {
   position: fixed;
   left: 13%;
   bottom: 0;
+}
+
+// Dev portfolio imeages
+.grid:nth-of-type(2) .newcard img{
+  width: 100%;
+  object-fit: cover;
+  height: 234px;
+}
+
+.grid:nth-of-type(3) .newcard img{
+  object-fit: cover;
+  height: 234px;
 }
 
 .card {

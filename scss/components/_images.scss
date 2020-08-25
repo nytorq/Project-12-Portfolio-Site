@@ -31,41 +31,7 @@ img {
   }
 }
 
-// Card Styles
-// .card__frame {
-//   height: 200px;
-//   &:focus {
-//     border: 8px solid $color-comp-accent;
-//     border-radius: rem(4px);
-//   }
-// }
-
-.card {
-  width: 100%;
-  min-width: 200px;
-  height: 250px;
-  box-sizing: border-box;
-  border: 8px solid black;
-  transform: rotateX(0deg);
-  &:hover {
-    border: 8px solid $color-accent;
-  }
-  &:hover .portfolioTitle {
-    background-color: $color-accent;
-    color: $color-primary;
-  }
-}
-// Focus styles on .card (but really on its parent <a>)
-.grid a:focus .card {
-  border: 8px solid $color-comp-accent;
-}
-
-.grid a:focus .card .portfolioTitle {
-  background-color: $color-comp-accent;
-  color: $white;
-}
-
-// Design portfolio imeages
+// Design portfolio images
 .grid:nth-of-type(1) .card img {
   height: 90%;
   object-position: bottom center;
@@ -89,73 +55,3 @@ img {
   object-fit: cover;
   height: 234px;
 }
-
-// .card {
-//   height: 200px;
-//   width: 100%;
-//   border: 8px solid $color-primary;
-//   box-shadow: 0px 0 0 8px $color-primary;
-//   max-width: calc(100vw - 48px);
-//   display: inline-block;
-//   box-sizing: border-box;
-//   &:hover {
-//     box-shadow: 0px 0 0 8px $color-accent;
-//     border-color: $color-accent;
-//   }
-//   &:focus {
-//     box-shadow: 0px 0 0 8px $color-comp-accent;
-//   }
-// }
-
-.grid:nth-of-type(1) a:nth-child(1) .card {
-  background: linear-gradient(139.79deg, $nsp-blue 0%, $nsp-green 100%);
-}
-
-.grid:nth-of-type(1) a:nth-child(2) .card {
-  background: linear-gradient(324.5deg, $pep-tan 0%, $pep-black 100%);
-}
-
-.grid:nth-of-type(1) a:nth-child(3) .card {
-  background: linear-gradient(227.19deg, $hue-gray 0%, $hue-dark-gray 100%);
-}
-
-.grid:nth-of-type(1) a:nth-child(4) .card {
-  background: linear-gradient(180deg, $tsp-dark-red 0%, $tsp-red 100%);
-}
-
-// .portfolio__image {
-//   @include m(nsp) {
-//     @extend %porfolio_image;
-//     clip-path: inset(0 0 29.3% 0);
-//   }
-//   @include m(pep) {
-//     @extend %porfolio_image;
-//     clip-path: inset(0 0 56.4% 0);
-//   }
-//   @include m(hue) {
-//     @extend %porfolio_image;
-//     clip-path: inset(0 0 49.5% 0);
-//   }
-//   @include m(tsp) {
-//     @extend %porfolio_image;
-//     clip-path: inset(0 0 55.6% 0);
-//   }
-//   @include m(srs) {
-//     @extend %porfolio_image;
-//     object-position: 20% 35%;
-//   }
-// }
-
-// #art + .grid > span > a > img:first-child {
-//   object-position: 20% 20%;
-// }
-//
-// #art + .grid > span:last-child > a > img {
-//   object-position: 20% 78%;
-// }
-
-// .portfolio__screenshot {
-//   width: 100%;
-//   height: 200px;
-//   object-fit: cover;
-// }

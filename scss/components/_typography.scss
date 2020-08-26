@@ -120,6 +120,22 @@ ul {
   color: $white
 }
 
+.heroTag {
+  color: $white;
+  font-weight: $font-weight--bold;
+  background-color: $color-primary;
+  padding: 0.6rem;
+  display: inline-block;
+}
+
+.newWord {
+  color: $color-accent;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+
+
 // Anchor stylesheet
 a {
   text-align: center;
@@ -128,6 +144,8 @@ a {
     color: $color-accent;
   }
 }
+
+// Footer styles
 
 .footer {
   @include e(title) {
@@ -199,6 +217,21 @@ a {
     @include mq($break-t) {
       text-align: right;
     }
+  }
+}
+
+.copyright {
+  font-size: 0.6rem;
+  color: $white;
+  opacity: 20%;
+  margin: 1.5rem auto;
+  text-align: center;
+  width: 180px;
+  @include mq($break-t) {
+    text-align: inherit;
+    position: fixed;
+    bottom: 0;
+    width: inherit;
   }
 }
 

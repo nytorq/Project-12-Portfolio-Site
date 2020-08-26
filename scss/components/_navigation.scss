@@ -52,8 +52,9 @@ nav {
 }
 
 footer {
+  transform: rotate(0deg);
   background-color: $color-primary;
-  padding: rem(56px) rem(16px);
+  padding: rem(56px) rem(16px) 0 rem(16px);
   display: flex;
   flex-direction: column;
   margin-top: 4rem;

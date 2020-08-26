@@ -446,7 +446,10 @@ template {
 
 .container:first-child {
   position: relative;
-  top: 43%; }
+  top: 35%; }
+  @media (min-width: 768px) {
+    .container:first-child {
+      top: 46%; } }
   @media (min-width: 1024px) {
     .container:first-child {
       top: 52%; } }
@@ -501,8 +504,9 @@ nav {
   box-shadow: 0 0 20px 0px rgba(10, 9, 11, 0.5); }
 
 footer {
+  transform: rotate(0deg);
   background-color: #0A090B;
-  padding: 2.8rem 0.8rem;
+  padding: 2.8rem 0.8rem 0 0.8rem;
   display: flex;
   flex-direction: column;
   margin-top: 4rem; }
@@ -690,6 +694,18 @@ ul {
   word-break: normal;
   color: #fff; }
 
+.heroTag {
+  color: #fff;
+  font-weight: 600;
+  background-color: #0A090B;
+  padding: 0.6rem;
+  display: inline-block; }
+
+.newWord {
+  color: #00ffad;
+  font-weight: inherit;
+  font-size: inherit; }
+
 a {
   text-align: center;
   text-decoration: none; }
@@ -754,6 +770,20 @@ a {
   @media (min-width: 768px) {
     .footer__link {
       text-align: right; } }
+
+.copyright {
+  font-size: 0.6rem;
+  color: #fff;
+  opacity: 20%;
+  margin: 1.5rem auto;
+  text-align: center;
+  width: 180px; }
+  @media (min-width: 768px) {
+    .copyright {
+      text-align: inherit;
+      position: fixed;
+      bottom: 0;
+      width: inherit; } }
 
 .skip--prev {
   text-align: left; }

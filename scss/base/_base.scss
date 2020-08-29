@@ -26,11 +26,14 @@
   position: relative;
   top: 35%;
   @include mq($break-t) {
-    top: 46%;
+    top: 32%;
   }
   @include mq($break-d) {
-    top: 52%;
+    top: 46%;
   }
+  // @include mq($break-hd) {
+  //   top: 42%;
+  // }
 }
 
 .centered {

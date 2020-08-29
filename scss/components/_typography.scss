@@ -117,7 +117,13 @@ ul {
   text-align: left;
   line-height: 1;
   word-break: normal;
-  color: $white
+  color: $white;
+  @include mq($break-t) {
+    font-size: 7.6rem;
+  }
+  @include mq($break-hd) {
+    font-size: 11.6rem;
+  }
 }
 
 .heroTag {

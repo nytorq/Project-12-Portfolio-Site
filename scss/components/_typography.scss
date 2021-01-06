@@ -61,7 +61,7 @@ h4 {
   }
 }
 
-p, ul, ol, a, li {
+p, ul, ol, a, .bodyOl li {
   font-weight: $font-weight--regular;
   letter-spacing: -0.02em;
   @include mq($break-t) {
@@ -94,6 +94,8 @@ li {
     color: $color-accent;
   }
 }
+
+
 
 // Note: Not really sure I created <ul>s to look this way. Checked all design pages and there are no <ul>s?
 // ul {

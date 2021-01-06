@@ -14,10 +14,11 @@ img {
 }
 
 // Banner/Hero image
+
 .hero {
   background-image: linear-gradient(to right, rgba($color-comp-accent, 0.76), rgba($color-comp-accent, 0.76)),
                     linear-gradient(to right, rgba($color-accent, 0.78), rgba($color-accent, 0.78)),
-                    url(../images/Photo_of_Charlie_desaturated.jpg);
+                    url(../images/charlie-prator-hero-pic-1x.png);
   background-blend-mode: lighten,
                          darken,
                          normal;
